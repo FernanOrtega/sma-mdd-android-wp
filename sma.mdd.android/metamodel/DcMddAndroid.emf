@@ -1,8 +1,8 @@
 @namespace(
-	uri="http://sma/dc/1.0",
-	prefix="dc")
+	uri="http://sma/mdd/android/1.0",
+	prefix="mddandroid")
 @gmf(foo="bar")
-package classdiagram;
+package dcmddandroid;
 
 @gmf.node (
 	label="name",

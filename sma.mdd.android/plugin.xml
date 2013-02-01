@@ -8,7 +8,7 @@
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
-            uri="http://sma/dc/1.0"
+            uri="http://sma/mdd/android/1.0"
             class="classdiagram.ClassdiagramPackage"/>
    </extension>
 
