@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://sma/mdd/android/1.0"
-            class="classdiagram.ClassdiagramPackage"/>
+            class="dcmddandroid.DcmddandroidPackage"/>
    </extension>
 
 </plugin>
