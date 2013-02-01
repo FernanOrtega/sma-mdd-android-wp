@@ -1,0 +1,187 @@
+@namespace(
+	uri="http://sma/dc/1.0",
+	prefix="dc")
+@gmf(foo="bar")
+package classdiagram;
+
+@gmf.node (
+	label="name",
+	label.icon="false",
+	color = "255,255,255",
+	tool.name="Class",
+	tool.description="Class",
+	figure = "rectangle"
+)
+class Class extends ModelElement, Type {
+	attr boolean isAbstract;
+	@gmf.compartment(foo="bar")
+	val Class[*] innerClasses;
+	ref Class#extend extendedClass;
+	ref Interface#implements implements;
+	@gmf.compartment(foo="bar")
+	val Attribute[*] attributes;
+	@gmf.compartment(foo="bar")
+	val MethodSignature[*] methods;
+}
+
+@gmf.node (
+	label="name",
+	label.icon="false",
+	color = "255,255,255",
+	tool.name="Interface",
+	tool.description="Interface",
+	figure = "rectangle"
+)
+class Interface extends ModelElement {
+   @gmf.compartment(foo="bar")
+   ref Interface[*]#extend superInterfaces;
+   @gmf.compartment (
+	layout = "list"
+	)
+   val MethodSignature[*] methods;
+}
+
+abstract class ClassElement {
+   attr String name;
+   attr Visibility visibility;
+   attr boolean final;
+   attr boolean static;
+}
+
+@gmf.node (
+	label="name",
+	label.icon="false",
+	color = "255,255,255",
+	tool.name="Method",
+	tool.description="Method"
+)
+class MethodSignature extends ClassElement {
+   attr boolean isAbstract;
+   @gmf.compartment(foo="bar")
+   val Parameter[*] parameters;
+   @gmf.compartment(foo="bar")
+   ref Type returns;
+}
+@gmf.node (
+	label="name",
+	label.icon="false",
+	color = "255,255,255",
+	tool.name="Attribute",
+	tool.description="Attribute"
+)
+class Attribute extends ClassElement {
+   attr String defaultValue; 
+   @gmf.compartment(foo="bar") 
+   ref Type type; 
+}
+
+abstract class Type {}
+
+class Primitive extends Type {
+   attr PrimitiveType primitiveType;
+}
+
+@gmf.diagram(foo="bar")
+class Diagram {
+	attr String name;
+	val DiagramElement[*] diagramElements;
+}
+
+@gmf.node (
+	label="name",
+	label.icon="false",
+	color = "255,255,255",
+	tool.name="Package",
+	tool.description="Package",
+	figure = "rectangle"
+)
+class Package extends DiagramElement {
+   val Package[*]#subPackage subPackages;
+   @gmf.compartment(foo="bar")
+   val ModelElement[*] modelElements;
+   op String getFullName();
+}
+
+enum PrimitiveType {
+   byte;
+   short;
+   int;
+   long;
+   float;
+   double;
+   boolean;
+}
+
+abstract class DiagramElement {
+   attr String name;
+}
+
+abstract class ModelElement extends DiagramElement {
+   
+}
+
+enum Visibility {
+   public;
+   private;
+   protected;
+}
+@gmf.compartment(foo="bar")
+class Parameter {
+   attr String name;
+   ref Type type;
+}
+@gmf.node (
+	label="name",
+	label.icon="false",
+	color = "255,255,255",
+	tool.name="Enum",
+	tool.description="Enum",
+	figure = "rectangle"
+)
+class Enum extends ModelElement {
+	@gmf.compartment(foo="bar")
+	val EnumValue[*] values;
+}
+@gmf.compartment(foo="bar")
+class EnumValue {
+   attr String name;
+   attr int intValue;
+}
+
+@gmf.link(
+	label="name",
+	source="memberA",
+	target="memberB",
+	color="0,0,0"
+)
+class Association {
+   attr String name;
+   attr String rolA;
+   attr String rolB;
+   attr int minMultiplicityA;
+   attr int maxMultiplicityA;
+   attr int minMultiplicityB;
+   attr int maxMultiplicityB;
+   val Class#member1 memberA;
+   val Class#member2 memberB;
+}
+
+@gmf.link(
+	label="name",
+	source="memberA",
+	target="memberB",
+	color="0,0,0",
+	tool.description="Agregación"
+)
+class Agregation extends Association {}
+
+@gmf.link(
+	label="name",
+	source="memberA",
+	target="memberB",
+	color="0,0,0",
+	source.decoration="rhomb",
+	target.decoration="arrow",
+	tool.description="Composition"
+)
+class Composition extends Association {}
