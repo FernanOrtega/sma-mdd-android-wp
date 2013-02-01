@@ -4,7 +4,7 @@
   <eAnnotations source="gmf">
     <details key="foo" value="bar"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//ModelElement #//Type">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractClass" abstract="true" eSuperTypes="#//ModelElement #//Type">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
       <details key="label.icon" value="false"/>
@@ -15,12 +15,12 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="innerClasses" upperBound="-1"
-        eType="#//Class" containment="true">
+        eType="#//AbstractClass" containment="true">
       <eAnnotations source="gmf.compartment">
         <details key="foo" value="bar"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedClass" eType="#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedClass" eType="#//AbstractClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//Attribute" containment="true">
@@ -35,6 +35,8 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CycleClass" eSuperTypes="#//AbstractClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//AbstractClass"/>
   <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//ModelElement">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
@@ -99,6 +101,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Hasheable" eSuperTypes="#//Attribute"/>
   <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Primitive" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="primitiveType" eType="#//PrimitiveType"/>
@@ -192,9 +195,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxMultiplicityA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minMultiplicityB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxMultiplicityB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="memberA" eType="#//Class"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memberA" eType="#//AbstractClass"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="memberB" eType="#//Class"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memberB" eType="#//AbstractClass"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Agregation" eSuperTypes="#//Association">
@@ -217,4 +220,5 @@
       <details key="tool.description" value="Composition"/>
     </eAnnotations>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersistentClass" eSuperTypes="#//AbstractClass"/>
 </ecore:EPackage>
