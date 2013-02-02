@@ -8,11 +8,11 @@ abstract class NamedElement {
    attr String name;
 }
 
-abstract class AbstractClass extends ModelElement {
+abstract class AbstractClass extends ModelElement, EVisibility {
 	attr boolean isAbstract;
 	@gmf.compartment(foo="bar")
 	val AbstractClass[*] innerClasses;
-	ref Interface#implements implements;
+	ref Implements[*]#implements implements;
 	@gmf.compartment(layout="list", collapsible="false")
 	val Attribute[*] attributes;
 	@gmf.compartment(layout="list", collapsible="false")
@@ -63,7 +63,7 @@ class PersistentClass extends AbstractClass {}
 	tool.description="Interface",
 	figure = "rectangle"
 )
-class Interface extends ModelElement {
+class Interface extends ModelElement, EVisibility {
    @gmf.compartment(foo="bar")
    ref Interface[*]#extend superInterfaces;
    @gmf.compartment (
@@ -72,15 +72,14 @@ class Interface extends ModelElement {
    val Method[*] methods;
 }
 
-abstract class ClassElement extends NamedElement{
-   attr Visibility visibility;
+abstract class ClassElement extends NamedElement, EVisibility{
    attr boolean final;
    attr boolean static;
 }
 
 @gmf.node (
-	label="name",
-	label.icon="false",
+	label="name,returns", figure="rectangle",
+    label.icon="false", label.pattern="{0} : {1}",
 	color = "255,255,255",
 	tool.name="Method",
 	tool.description="Method"
@@ -92,9 +91,8 @@ class Method extends ClassElement {
    attr String returns;
 }
 
-@gmf.node (
-	label="name",
-	label.icon="false",
+@gmf.node (label="name,type", figure="rectangle",
+    label.icon="false", label.pattern="{0} : {1}",
 	color = "255,255,255",
 	tool.name="Attribute",
 	tool.description="Attribute"
@@ -153,12 +151,19 @@ class Enum extends ModelElement {
 	@gmf.compartment(foo="bar")
 	val EnumValue[*] values;
 }
-@gmf.compartment(foo="bar")
+@gmf.node (
+	label="name", figure="rectangle",
+    label.icon="false",
+	color = "255,255,255",
+	tool.name="Enum",
+	tool.description="Enum",
+	figure = "rectangle"
+)
 class EnumValue extends NamedElement{
    attr int intValue;
 }
 
-abstract class Association extends DiagramElement{
+abstract class Association extends ModelElement{
    attr String rolA;
    attr String rolB;
    attr int minMultiplicityA;
@@ -200,4 +205,20 @@ class Composition extends Association {}
 class Inheritance extends ModelElement {
    ref AbstractClass#superclass superClass;
    ref AbstractClass#childclass childClass;
+}
+
+@gmf.link(
+	label="name",
+	source="implements",
+	target="implemented",
+	color="0,0,0",
+	tool.description="Implements"
+)
+class Implements extends ModelElement {
+   ref Interface[1]#implemented implemented;
+   ref AbstractClass[1]#implements implements;
+}
+
+class EVisibility {
+	attr Visibility visibility;
 }
