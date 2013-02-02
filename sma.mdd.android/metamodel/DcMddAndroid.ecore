@@ -9,10 +9,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractClass" abstract="true" eSuperTypes="#//ModelElement #//EVisibility">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="innerClass" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="innerClassAsInner" upperBound="-1"
         eType="#//InnerClass" eOpposite="#//InnerClass/innerClass"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//InnerClass"
-        eOpposite="#//InnerClass/container"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="innerClassAsContainer"
+        eType="#//InnerClass" eOpposite="#//InnerClass/container"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="implements" upperBound="-1"
         eType="#//Implements" eOpposite="#//Implements/implements"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -259,12 +259,13 @@
       <details key="label" value="name"/>
       <details key="source" value="innerClass"/>
       <details key="target" value="container"/>
+      <details key="target.decoration" value="arrow"/>
       <details key="color" value="0,0,0"/>
       <details key="tool.description" value="InnerClass"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="innerClass" lowerBound="1"
-        eType="#//AbstractClass" eOpposite="#//AbstractClass/innerClass"/>
+        eType="#//AbstractClass" eOpposite="#//AbstractClass/innerClassAsInner"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="container" lowerBound="1"
-        eType="#//AbstractClass" eOpposite="#//AbstractClass/container"/>
+        eType="#//AbstractClass" eOpposite="#//AbstractClass/innerClassAsContainer"/>
   </eClassifiers>
 </ecore:EPackage>

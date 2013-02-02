@@ -10,8 +10,8 @@ abstract class NamedElement {
 
 abstract class AbstractClass extends ModelElement, EVisibility {
 	attr boolean isAbstract;
-	ref InnerClass[*]#innerClass innerClass;
-	ref InnerClass[?]#container container;	
+	ref InnerClass[*]#innerClass innerClassAsInner;
+	ref InnerClass[?]#container innerClassAsContainer;	
 	ref Implements[*]#implements implements;
 	@gmf.compartment(layout="list", collapsible="false")
 	val Attribute[*] attributes;
@@ -227,10 +227,11 @@ class EVisibility {
 	label="name",
 	source="innerClass",
 	target="container",
+	target.decoration="arrow",
 	color="0,0,0",
 	tool.description="InnerClass"
 )
 class InnerClass extends ModelElement {
-   ref AbstractClass[1]#innerClass innerClass;
-   ref AbstractClass[1]#container container;
+   ref AbstractClass[1]#innerClassAsInner innerClass;
+   ref AbstractClass[1]#innerClassAsContainer container;
 }
