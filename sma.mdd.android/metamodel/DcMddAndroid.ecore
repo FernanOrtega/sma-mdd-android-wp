@@ -7,7 +7,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractClass" abstract="true" eSuperTypes="#//ModelElement">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractClass" abstract="true" eSuperTypes="#//ModelElement #//EVisibility">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="innerClasses" upperBound="-1"
         eType="#//AbstractClass" containment="true">
@@ -15,7 +15,8 @@
         <details key="foo" value="bar"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" upperBound="-1"
+        eType="#//Implements" eOpposite="#//Implements/implements"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//Attribute" containment="true">
       <eAnnotations source="gmf.compartment">
@@ -67,7 +68,7 @@
       <details key="figure" value="rectangle"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//ModelElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//ModelElement #//EVisibility">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
       <details key="label.icon" value="false"/>
@@ -89,15 +90,16 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassElement" abstract="true" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassElement" abstract="true" eSuperTypes="#//NamedElement #//EVisibility">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="final" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="static" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="#//ClassElement">
     <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
+      <details key="label" value="name,returns"/>
+      <details key="figure" value="rectangle"/>
       <details key="label.icon" value="false"/>
+      <details key="label.pattern" value="{0}:{1}"/>
       <details key="color" value="255,255,255"/>
       <details key="tool.name" value="Method"/>
       <details key="tool.description" value="Method"/>
@@ -113,8 +115,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//ClassElement">
     <eAnnotations source="gmf.node">
-      <details key="label" value="name"/>
+      <details key="label" value="name,type"/>
+      <details key="figure" value="rectangle"/>
       <details key="label.icon" value="false"/>
+      <details key="label.pattern" value="{0}:{1}"/>
       <details key="color" value="255,255,255"/>
       <details key="tool.name" value="Attribute"/>
       <details key="tool.description" value="Attribute"/>
@@ -179,12 +183,17 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EnumValue" eSuperTypes="#//NamedElement">
-    <eAnnotations source="gmf.compartment">
-      <details key="foo" value="bar"/>
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="figure" value="rectangle"/>
+      <details key="label.icon" value="false"/>
+      <details key="color" value="255,255,255"/>
+      <details key="tool.name" value="Enum"/>
+      <details key="tool.description" value="Enum"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="intValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Association" abstract="true" eSuperTypes="#//DiagramElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Association" abstract="true" eSuperTypes="#//ModelElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minMultiplicityA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -228,5 +237,21 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" eType="#//AbstractClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="childClass" eType="#//AbstractClass"
         eOpposite="#//AbstractClass/childclass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Implements" eSuperTypes="#//ModelElement">
+    <eAnnotations source="gmf.link">
+      <details key="label" value="name"/>
+      <details key="source" value="implements"/>
+      <details key="target" value="implemented"/>
+      <details key="color" value="0,0,0"/>
+      <details key="tool.description" value="Implements"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implemented" lowerBound="1"
+        eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implements" lowerBound="1"
+        eType="#//AbstractClass" eOpposite="#//AbstractClass/implements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EVisibility">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"/>
   </eClassifiers>
 </ecore:EPackage>
