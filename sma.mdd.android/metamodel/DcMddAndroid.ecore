@@ -179,7 +179,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="intValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//DiagramElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Association" abstract="true" eSuperTypes="#//DiagramElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="rolB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minMultiplicityA" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
