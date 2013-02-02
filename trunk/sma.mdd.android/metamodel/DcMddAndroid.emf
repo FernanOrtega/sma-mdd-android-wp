@@ -10,8 +10,8 @@ abstract class NamedElement {
 
 abstract class AbstractClass extends ModelElement, EVisibility {
 	attr boolean isAbstract;
-	@gmf.compartment(foo="bar")
-	val AbstractClass[*] innerClasses;
+	ref InnerClass[*]#innerClass innerClass;
+	ref InnerClass[?]#container container;	
 	ref Implements[*]#implements implements;
 	@gmf.compartment(layout="list", collapsible="false")
 	val Attribute[*] attributes;
@@ -148,15 +148,15 @@ class Parameter extends NamedElement{
 	figure = "rectangle"
 )
 class Enum extends ModelElement {
-	@gmf.compartment(foo="bar")
+	@gmf.compartment(layout="list", collapsible="false")
 	val EnumValue[*] values;
 }
 @gmf.node (
 	label="name", figure="rectangle",
     label.icon="false",
 	color = "255,255,255",
-	tool.name="Enum",
-	tool.description="Enum",
+	tool.name="EnumValue",
+	tool.description="EnumValue",
 	figure = "rectangle"
 )
 class EnumValue extends NamedElement{
@@ -203,8 +203,8 @@ class Composition extends Association {}
 	tool.description="Inheritance"
 )
 class Inheritance extends ModelElement {
-   ref AbstractClass#superclass superClass;
-   ref AbstractClass#childclass childClass;
+   ref AbstractClass[1]#superclass superClass;
+   ref AbstractClass[1]#childclass childClass;
 }
 
 @gmf.link(
@@ -221,4 +221,16 @@ class Implements extends ModelElement {
 
 class EVisibility {
 	attr Visibility visibility;
+}
+
+@gmf.link(
+	label="name",
+	source="innerClass",
+	target="container",
+	color="0,0,0",
+	tool.description="InnerClass"
+)
+class InnerClass extends ModelElement {
+   ref AbstractClass[1]#innerClass innerClass;
+   ref AbstractClass[1]#container container;
 }

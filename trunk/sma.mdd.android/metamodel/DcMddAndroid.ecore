@@ -9,12 +9,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AbstractClass" abstract="true" eSuperTypes="#//ModelElement #//EVisibility">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="innerClasses" upperBound="-1"
-        eType="#//AbstractClass" containment="true">
-      <eAnnotations source="gmf.compartment">
-        <details key="foo" value="bar"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="innerClass" upperBound="-1"
+        eType="#//InnerClass" eOpposite="#//InnerClass/innerClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//InnerClass"
+        eOpposite="#//InnerClass/container"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="implements" upperBound="-1"
         eType="#//Implements" eOpposite="#//Implements/implements"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
@@ -99,7 +97,7 @@
       <details key="label" value="name,returns"/>
       <details key="figure" value="rectangle"/>
       <details key="label.icon" value="false"/>
-      <details key="label.pattern" value="{0}:{1}"/>
+      <details key="label.pattern" value="{0} : {1}"/>
       <details key="color" value="255,255,255"/>
       <details key="tool.name" value="Method"/>
       <details key="tool.description" value="Method"/>
@@ -118,7 +116,7 @@
       <details key="label" value="name,type"/>
       <details key="figure" value="rectangle"/>
       <details key="label.icon" value="false"/>
-      <details key="label.pattern" value="{0}:{1}"/>
+      <details key="label.pattern" value="{0} : {1}"/>
       <details key="color" value="255,255,255"/>
       <details key="tool.name" value="Attribute"/>
       <details key="tool.description" value="Attribute"/>
@@ -178,7 +176,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
         eType="#//EnumValue" containment="true">
       <eAnnotations source="gmf.compartment">
-        <details key="foo" value="bar"/>
+        <details key="layout" value="list"/>
+        <details key="collapsible" value="false"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -188,8 +187,8 @@
       <details key="figure" value="rectangle"/>
       <details key="label.icon" value="false"/>
       <details key="color" value="255,255,255"/>
-      <details key="tool.name" value="Enum"/>
-      <details key="tool.description" value="Enum"/>
+      <details key="tool.name" value="EnumValue"/>
+      <details key="tool.description" value="EnumValue"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="intValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
@@ -234,9 +233,10 @@
       <details key="target.decoration" value="closedarrow"/>
       <details key="tool.description" value="Inheritance"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" eType="#//AbstractClass"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="childClass" eType="#//AbstractClass"
-        eOpposite="#//AbstractClass/childclass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" lowerBound="1"
+        eType="#//AbstractClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childClass" lowerBound="1"
+        eType="#//AbstractClass" eOpposite="#//AbstractClass/childclass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Implements" eSuperTypes="#//ModelElement">
     <eAnnotations source="gmf.link">
@@ -253,5 +253,18 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EVisibility">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InnerClass" eSuperTypes="#//ModelElement">
+    <eAnnotations source="gmf.link">
+      <details key="label" value="name"/>
+      <details key="source" value="innerClass"/>
+      <details key="target" value="container"/>
+      <details key="color" value="0,0,0"/>
+      <details key="tool.description" value="InnerClass"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="innerClass" lowerBound="1"
+        eType="#//AbstractClass" eOpposite="#//AbstractClass/innerClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" lowerBound="1"
+        eType="#//AbstractClass" eOpposite="#//AbstractClass/container"/>
   </eClassifiers>
 </ecore:EPackage>
