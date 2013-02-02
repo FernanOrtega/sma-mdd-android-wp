@@ -4,25 +4,55 @@
 @gmf(foo="bar")
 package dcmddandroid;
 
+abstract class NamedElement {
+   attr String name;
+}
+
+abstract class AbstractClass extends ModelElement {
+	attr boolean isAbstract;
+	@gmf.compartment(foo="bar")
+	val AbstractClass[*] innerClasses;
+	ref Interface#implements implements;
+	@gmf.compartment(foo="bar")
+	val Attribute[*] attributes;
+	@gmf.compartment(foo="bar")
+	val Method[*] methods;
+	ref Association[+] associationA;
+	ref Association[+] associationB;
+}
+
 @gmf.node (
 	label="name",
 	label.icon="false",
 	color = "255,255,255",
 	tool.name="Class",
 	tool.description="Class",
-	figure = "rectangle"
+	figure = "rectangle",
+	tool.name="Class"
 )
-class Class extends ModelElement, Type {
-	attr boolean isAbstract;
-	@gmf.compartment(foo="bar")
-	val Class[*] innerClasses;
-	ref Class#extend extendedClass;
-	ref Interface#implements implements;
-	@gmf.compartment(foo="bar")
-	val Attribute[*] attributes;
-	@gmf.compartment(foo="bar")
-	val MethodSignature[*] methods;
-}
+class Class extends AbstractClass {}
+
+@gmf.node (
+	label="name",
+	label.icon="false",
+	color = "255,255,255",
+	tool.name="CycleClass",
+	tool.description="CycleClass",
+	figure = "rectangle",
+	tool.name="CycleClass"
+)
+class CycleClass extends AbstractClass {}
+
+@gmf.node (
+	label="name",
+	label.icon="false",
+	color = "255,255,255",
+	tool.name="PersistentClass",
+	tool.description="PersistentClass",
+	figure = "rectangle",
+	tool.name="PersistentClass"
+)
+class PersistentClass extends AbstractClass {}
 
 @gmf.node (
 	label="name",
@@ -38,11 +68,10 @@ class Interface extends ModelElement {
    @gmf.compartment (
 	layout = "list"
 	)
-   val MethodSignature[*] methods;
+   val Method[*] methods;
 }
 
-abstract class ClassElement {
-   attr String name;
+abstract class ClassElement extends NamedElement{
    attr Visibility visibility;
    attr boolean final;
    attr boolean static;
@@ -55,13 +84,13 @@ abstract class ClassElement {
 	tool.name="Method",
 	tool.description="Method"
 )
-class MethodSignature extends ClassElement {
+class Method extends ClassElement {
    attr boolean isAbstract;
    @gmf.compartment(foo="bar")
    val Parameter[*] parameters;
-   @gmf.compartment(foo="bar")
-   ref Type returns;
+   attr String returns;
 }
+
 @gmf.node (
 	label="name",
 	label.icon="false",
@@ -70,20 +99,12 @@ class MethodSignature extends ClassElement {
 	tool.description="Attribute"
 )
 class Attribute extends ClassElement {
-   attr String defaultValue; 
-   @gmf.compartment(foo="bar") 
-   ref Type type; 
-}
-
-abstract class Type {}
-
-class Primitive extends Type {
-   attr PrimitiveType primitiveType;
+   attr String defaultValue;  
+   attr String type; 
 }
 
 @gmf.diagram(foo="bar")
 class Diagram {
-	attr String name;
 	val DiagramElement[*] diagramElements;
 }
 
@@ -102,18 +123,7 @@ class Package extends DiagramElement {
    op String getFullName();
 }
 
-enum PrimitiveType {
-   byte;
-   short;
-   int;
-   long;
-   float;
-   double;
-   boolean;
-}
-
-abstract class DiagramElement {
-   attr String name;
+abstract class DiagramElement extends NamedElement{
 }
 
 abstract class ModelElement extends DiagramElement {
@@ -126,9 +136,8 @@ enum Visibility {
    protected;
 }
 @gmf.compartment(foo="bar")
-class Parameter {
-   attr String name;
-   ref Type type;
+class Parameter extends NamedElement{
+   attr String type;
 }
 @gmf.node (
 	label="name",
@@ -143,27 +152,19 @@ class Enum extends ModelElement {
 	val EnumValue[*] values;
 }
 @gmf.compartment(foo="bar")
-class EnumValue {
-   attr String name;
+class EnumValue extends NamedElement{
    attr int intValue;
 }
 
-@gmf.link(
-	label="name",
-	source="memberA",
-	target="memberB",
-	color="0,0,0"
-)
-class Association {
-   attr String name;
+class Association extends DiagramElement{
    attr String rolA;
    attr String rolB;
    attr int minMultiplicityA;
    attr int maxMultiplicityA;
    attr int minMultiplicityB;
    attr int maxMultiplicityB;
-   val Class#member1 memberA;
-   val Class#member2 memberB;
+   val AbstractClass[1]#member1 memberA;
+   val AbstractClass[1]#member2 memberB;
 }
 
 @gmf.link(
@@ -171,7 +172,7 @@ class Association {
 	source="memberA",
 	target="memberB",
 	color="0,0,0",
-	tool.description="Agregación"
+	tool.description="Agregation"
 )
 class Agregation extends Association {}
 
@@ -185,3 +186,16 @@ class Agregation extends Association {}
 	tool.description="Composition"
 )
 class Composition extends Association {}
+
+@gmf.link(
+	label="name",
+	source="childClass",
+	target="superClass",
+	color="0,0,0",
+	target.decoration="closedarrow",
+	tool.description="Inheritance"
+)
+class Inheritance extends ModelElement {
+   ref AbstractClass#superclass superClass;
+   ref AbstractClass#childclass childClass;
+}
