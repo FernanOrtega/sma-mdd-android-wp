@@ -156,7 +156,7 @@ class EnumValue extends NamedElement{
    attr int intValue;
 }
 
-class Association extends DiagramElement{
+abstract class Association extends DiagramElement{
    attr String rolA;
    attr String rolB;
    attr int minMultiplicityA;
