@@ -13,12 +13,13 @@ abstract class AbstractClass extends ModelElement {
 	@gmf.compartment(foo="bar")
 	val AbstractClass[*] innerClasses;
 	ref Interface#implements implements;
-	@gmf.compartment(foo="bar")
+	@gmf.compartment(layout="list", collapsible="false")
 	val Attribute[*] attributes;
-	@gmf.compartment(foo="bar")
+	@gmf.compartment(layout="list", collapsible="false")
 	val Method[*] methods;
-	ref Association[+] associationA;
-	ref Association[+] associationB;
+	ref Association[*]#memberA associationA;
+	ref Association[*]#memberB associationB;
+	ref Inheritance#childClass childclass;
 }
 
 @gmf.node (
@@ -101,6 +102,7 @@ class Method extends ClassElement {
 class Attribute extends ClassElement {
    attr String defaultValue;  
    attr String type; 
+   attr Boolean secured;
 }
 
 @gmf.diagram(foo="bar")
@@ -163,8 +165,8 @@ abstract class Association extends DiagramElement{
    attr int maxMultiplicityA;
    attr int minMultiplicityB;
    attr int maxMultiplicityB;
-   val AbstractClass[1]#member1 memberA;
-   val AbstractClass[1]#member2 memberB;
+   ref AbstractClass[1]#associationA memberA;
+   ref AbstractClass[1]#associationB memberB;
 }
 
 @gmf.link(
