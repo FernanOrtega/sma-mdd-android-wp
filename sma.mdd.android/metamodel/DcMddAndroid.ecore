@@ -19,19 +19,23 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
         eType="#//Attribute" containment="true">
       <eAnnotations source="gmf.compartment">
-        <details key="foo" value="bar"/>
+        <details key="layout" value="list"/>
+        <details key="collapsible" value="false"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1"
         eType="#//Method" containment="true">
       <eAnnotations source="gmf.compartment">
-        <details key="foo" value="bar"/>
+        <details key="layout" value="list"/>
+        <details key="collapsible" value="false"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="associationA" lowerBound="1"
-        upperBound="-1" eType="#//Association"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="associationB" lowerBound="1"
-        upperBound="-1" eType="#//Association"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associationA" upperBound="-1"
+        eType="#//Association" eOpposite="#//Association/memberA"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="associationB" upperBound="-1"
+        eType="#//Association" eOpposite="#//Association/memberB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childclass" eType="#//Inheritance"
+        eOpposite="#//Inheritance/childClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//AbstractClass">
     <eAnnotations source="gmf.node">
@@ -117,6 +121,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="secured" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Diagram">
     <eAnnotations source="gmf.diagram">
@@ -187,9 +192,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minMultiplicityB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxMultiplicityB" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="memberA" lowerBound="1"
-        eType="#//AbstractClass" containment="true"/>
+        eType="#//AbstractClass" eOpposite="#//AbstractClass/associationA"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="memberB" lowerBound="1"
-        eType="#//AbstractClass" containment="true"/>
+        eType="#//AbstractClass" eOpposite="#//AbstractClass/associationB"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Agregation" eSuperTypes="#//Association">
     <eAnnotations source="gmf.link">
@@ -221,6 +226,7 @@
       <details key="tool.description" value="Inheritance"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" eType="#//AbstractClass"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="childClass" eType="#//AbstractClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childClass" eType="#//AbstractClass"
+        eOpposite="#//AbstractClass/childclass"/>
   </eClassifiers>
 </ecore:EPackage>
