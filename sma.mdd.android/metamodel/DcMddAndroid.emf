@@ -104,7 +104,7 @@ class Attribute extends ClassElement {
 }
 
 @gmf.diagram(foo="bar")
-class Diagram {
+class Diagram extends NamedElement{
 	val DiagramElement[*] diagramElements;
 }
 
