@@ -4,9 +4,15 @@
     <attributes name="attr1" type="String"/>
     <attributes name="attr2" type="String"/>
   </diagramElements>
-  <diagramElements xsi:type="mddandroid:PersistentClass" name="pc2" associationAsTarget="//@diagramElements.2">
+  <diagramElements xsi:type="mddandroid:PersistentClass" name="pc2" associationAsTarget="//@diagramElements.2 //@diagramElements.4">
     <attributes name="attr3" type="Integer"/>
     <attributes name="attr4" type="Integer"/>
   </diagramElements>
   <diagramElements xsi:type="mddandroid:Agregation" rolTarget="lstPc2" minMultiplicityTarget="-1" source="//@diagramElements.0" target="//@diagramElements.1"/>
+  <diagramElements xsi:type="mddandroid:PersistentClass" name="pc3" associationAsSource="//@diagramElements.4">
+    <attributes name="attr5" type="String"/>
+    <attributes name="attr6" type="Integer"/>
+    <attributes name="attr7" type="String"/>
+  </diagramElements>
+  <diagramElements xsi:type="mddandroid:Agregation" name="tiene" rolTarget="rolPc2" minMultiplicityTarget="1" source="//@diagramElements.3" target="//@diagramElements.1"/>
 </mddandroid:Diagram>
