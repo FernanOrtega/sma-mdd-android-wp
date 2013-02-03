@@ -1,0 +1,16 @@
+«IMPORT DbMddAndroid»
+«EXTENSION template::bd2sqliteExtension»
+«DEFINE main FOR DbMddAndroid::DBScheme»
+«FILE name+".sql"-»
+--Schema «this.name»
+«EXPAND table FOREACH tables-»
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE table FOR Table»
+-- Table «this.name»
+CREATE TABLE «this.name»  
+(
+«FOREACH columns AS column SEPARATOR ','-»
+«ENDFOREACH-»
+«ENDDEFINE»
