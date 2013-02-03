@@ -4,11 +4,47 @@
 module dc2db;
 create DBOUT : DBMM from DCIN : DCMM;
 
+rule Association2Relation{
+	from
+	assDC : DCMM!Association
+	to
+	outER:DBMM!Relation(
+		source <- assDC.source,
+		target <- assDC.target,
+		minSourceMultiplicity <- assDC.minMultiplicitySource,
+		minTargetMultiplicity <- assDC.minMultiplicityTarget,
+		maxSourceMultiplicity <- assDC.maxMultiplicitySource,
+		maxTargetMultiplicity <- assDC.maxMultiplicityTarget
+	)
+}
+
+rule Attribute2column{
+	from
+	attrDC : DCMM!Attribute
+	to
+	outER:DBMM!Column(
+		name <- attrDC.name,
+		type <- attrDC.type
+		)
+}
+
+rule PersistentClass2Table{
+	from
+	classDC:DCMM!PersistentClass
+	to
+	outER:DBMM!Table(
+		name <- classDC.name,
+		columns <- classDC.attributes,
+		inRelation <- classDC.associationAsTarget,
+		outRelation <- classDC.associationAsSource
+	)
+}
+
 rule Diagram2Scheme{
 	from
 	DCIN:DCMM!Diagram
 	to
 	outER:DBMM!DBScheme(
-		name <- DCIN!name
+		name <- DCIN.name
 	)
 }
