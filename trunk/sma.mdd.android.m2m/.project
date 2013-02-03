@@ -3,7 +3,6 @@
 	<name>sma.mdd.android.m2m</name>
 	<comment></comment>
 	<projects>
-		<project>sma.mdd.android</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

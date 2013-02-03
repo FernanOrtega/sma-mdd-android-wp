@@ -17,9 +17,8 @@ abstract class AbstractClass extends ModelElement, EVisibility {
 	val Attribute[*] attributes;
 	@gmf.compartment(layout="list", collapsible="false")
 	val Method[*] methods;
-	ref Association[*]#memberA associationA;
-	ref Association[*]#memberB associationB;
-	ref Inheritance#childClass childclass;
+	ref Association[*]#source associationAsSource;
+	ref Association[*]#target associationAsTarget;
 }
 
 @gmf.node (
@@ -164,20 +163,20 @@ class EnumValue extends NamedElement{
 }
 
 abstract class Association extends ModelElement{
-   attr String rolA;
-   attr String rolB;
-   attr int minMultiplicityA;
-   attr int maxMultiplicityA;
-   attr int minMultiplicityB;
-   attr int maxMultiplicityB;
-   ref AbstractClass[1]#associationA memberA;
-   ref AbstractClass[1]#associationB memberB;
+   attr String rolSource;
+   attr String rolTarget;
+   attr int minMultiplicitySource;
+   attr int maxMultiplicitySource;
+   attr int minMultiplicityTarget;
+   attr int maxMultiplicityTarget;
+   ref AbstractClass[1]#associationAsSource source;
+   ref AbstractClass[1]#associationAsTarget target;
 }
 
 @gmf.link(
 	label="name",
-	source="memberA",
-	target="memberB",
+	source="source",
+	target="target",
 	color="0,0,0",
 	tool.description="Agregation"
 )
@@ -185,27 +184,14 @@ class Agregation extends Association {}
 
 @gmf.link(
 	label="name",
-	source="memberA",
-	target="memberB",
+	source="source",
+	target="target",
 	color="0,0,0",
 	source.decoration="rhomb",
 	target.decoration="arrow",
 	tool.description="Composition"
 )
 class Composition extends Association {}
-
-@gmf.link(
-	label="name",
-	source="childClass",
-	target="superClass",
-	color="0,0,0",
-	target.decoration="closedarrow",
-	tool.description="Inheritance"
-)
-class Inheritance extends ModelElement {
-   ref AbstractClass[1]#superclass superClass;
-   ref AbstractClass[1]#childclass childClass;
-}
 
 @gmf.link(
 	label="name",
