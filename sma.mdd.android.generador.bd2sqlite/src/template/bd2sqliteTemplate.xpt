@@ -10,8 +10,9 @@
 «DEFINE table FOR Table»
 -- Table «this.name»
 CREATE TABLE «this.name»  
-(
+(id INTEGER PRIMARY KEY AUTOINCREMENT,«" "-»
 «FOREACH columns AS column SEPARATOR ','-»
+«" "+column.name+" "+typeColumn(column)-»
 «ENDFOREACH-»
 );
 «ENDDEFINE»

@@ -10,7 +10,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
         eType="#//Column" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="primaryKey" eType="#//Column"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outRelation" upperBound="-1"
         eType="#//Relation" containment="true" eOpposite="#//Relation/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inRelation" upperBound="-1"
