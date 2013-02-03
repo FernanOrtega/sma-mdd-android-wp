@@ -21,7 +21,9 @@
       <attributes name="password" visibility="private" type="String"/>
       <methods name="login" returns="boolean"/>
     </modelElements>
-    <modelElements xsi:type="mddandroid:CycleClass" name="Agenda"/>
+    <modelElements xsi:type="mddandroid:CycleClass" name="Agenda">
+      <attributes name="agenda" visibility="private" type="ListView"/>
+    </modelElements>
   </diagramElements>
   <diagramElements xsi:type="mddandroid:Composition" rolA="" minMultiplicityA="1" maxMultiplicityA="1" memberA="//@diagramElements.0/@modelElements.1" memberB="//@diagramElements.0/@modelElements.1"/>
   <diagramElements xsi:type="mddandroid:Package" name="com.sma.seguridad">
