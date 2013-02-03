@@ -15,14 +15,7 @@
         eType="#//Relation" eOpposite="#//Relation/target"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Column" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PrimitiveType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PrimitiveType">
-    <eLiterals name="String"/>
-    <eLiterals name="Integer" value="1"/>
-    <eLiterals name="Double" value="2"/>
-    <eLiterals name="Date" value="3"/>
-    <eLiterals name="Boolean" value="4"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -34,11 +27,11 @@
         eType="#//Table" eOpposite="#//Table/inRelation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="minSourceMultiplicity"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxSourceMultiplicity"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxSourceMultiplicity"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="minTargetMultiplicity"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minTargetMultiplicity"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxTargetMultiplicity"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxTargetMultiplicity"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>
