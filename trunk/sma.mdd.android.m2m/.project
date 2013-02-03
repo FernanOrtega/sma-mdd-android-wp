@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>sma.mdd.android.m2m</name>
+	<comment></comment>
+	<projects>
+		<project>sma.mdd.android</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.m2m.atl.adt.builder.atlBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.m2m.atl.adt.builder.atlNature</nature>
+	</natures>
+</projectDescription>

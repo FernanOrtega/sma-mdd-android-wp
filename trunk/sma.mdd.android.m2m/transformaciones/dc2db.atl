@@ -1,0 +1,14 @@
+-- @path DBMM=/sma.mdd.android/metamodel/DbMddAndroid.ecore
+-- @path DCMM=/sma.mdd.android/metamodel/DcMddAndroid.ecore
+
+module dc2db;
+create DBOUT : DBMM from DCIN : DCMM;
+
+rule Diagram2Scheme{
+	from
+	DCIN:DCMM!Diagram
+	to
+	outER:DBMM!DBScheme(
+		name <- DCIN!name
+	)
+}
