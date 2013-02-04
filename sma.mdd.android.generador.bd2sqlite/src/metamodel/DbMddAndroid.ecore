@@ -11,9 +11,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
         eType="#//Column" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outRelation" upperBound="-1"
-        eType="#//Relation" containment="true" eOpposite="#//Relation/source"/>
+        eType="#//Relation" eOpposite="#//Relation/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inRelation" upperBound="-1"
-        eType="#//Relation" containment="true" eOpposite="#//Relation/target"/>
+        eType="#//Relation" eOpposite="#//Relation/target"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Column" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
