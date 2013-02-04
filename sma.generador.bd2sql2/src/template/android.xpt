@@ -21,6 +21,9 @@
 «ENDFOREACH-»
 «ENDIF-»
 «ENDIF-»
+«IF clearName(this.metaType.toString()) == 'CycleClass'-»
+ extends Activity
+«ENDIF-»
 	{
 	«FOREACH this.eContents.typeSelect(Attribute) AS soloAtributos-»
 		«IF soloAtributos.secured.toString() == 'true'-»
@@ -28,6 +31,28 @@
 		«ENDIF-»
 		«soloAtributos.visibility» «EsStatic(soloAtributos)» «Esfinal(soloAtributos)» «soloAtributos.type» «soloAtributos.name»;
 	«ENDFOREACH»
+
+«LET ((Class)this) AS e»
+	«IF e.associationAsSource.size >0»
+		«IF e.associationAsSource.rolTarget.isEmpty.toString() == "false"»
+			«e.associationAsSource.target.name» -rolTarget
+		«ENDIF»
+	«ELSEIF e.associationAsTarget.size >0»
+		«IF e.associationAsTarget.rolSource.isEmpty.toString() != "true"»
+			«e.associationAsTarget.target.name» -rolSource
+		«ENDIF»
+	«ENDIF»
+«ENDLET»
+
+«IF clearName(this.metaType.toString()) == 'CycleClass'-»
+	@Override
+	public boolean onCreate(Bundle foo){
+	
+		super.onCreate(foo);
+	//TODO onCreate
+	
+	}
+«ENDIF-»
 	«FOREACH this.eContents.typeSelect(Method) AS soloMetodos»
 	«soloMetodos.visibility» «soloMetodos.returns» «soloMetodos.name»(«FOREACH soloMetodos.parameters.typeSelect(Parameter) AS parametros SEPARATOR  ','» «parametros.type» «parametros.name»«ENDFOREACH») {
 			//TODO «clearName(soloMetodos.metaType.toString())» «soloMetodos.name»

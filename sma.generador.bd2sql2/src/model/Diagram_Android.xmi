@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="ASCII"?>
 <mddandroid:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mddandroid="http://sma/mdd/android/1.0" xsi:schemaLocation="http://sma/mdd/android/1.0 ../metamodel/dcmddandroid.ecore">
-  <modelElements xsi:type="mddandroid:Class" name="nuevaEra" isAbstract="true" implements="//@modelElements.1 //@modelElements.7">
+  <modelElements xsi:type="mddandroid:Class" name="nuevaEra" isAbstract="true" implements="//@modelElements.1 //@modelElements.7" associationAsSource="//@modelElements.9">
     <attributes name="enanos" visibility="private" type="String" secured="true"/>
     <attributes name="tierra" type="int"/>
     <methods name="getAltura" returns="int"/>
     <methods name="fuerza" final="true" returns="float"/>
   </modelElements>
   <modelElements xsi:type="mddandroid:Implements" name="noseve" implemented="//@modelElements.3" implements="//@modelElements.0"/>
-  <modelElements xsi:type="mddandroid:Class" name="otraClase"/>
+  <modelElements xsi:type="mddandroid:Class" name="otraClase" associationAsTarget="//@modelElements.9"/>
   <modelElements xsi:type="mddandroid:Interface" name="iTierraMedia">
     <methods name="iTierraAnillo" returns="anillo"/>
   </modelElements>
@@ -19,4 +19,5 @@
     <values name="valor_enum1"/>
     <values name="valor_enum2"/>
   </modelElements>
+  <modelElements xsi:type="mddandroid:Composition" name="nose_ve" rolSource="" rolTarget="fer" maxMultiplicityTarget="1" source="//@modelElements.0" target="//@modelElements.2"/>
 </mddandroid:Diagram>
