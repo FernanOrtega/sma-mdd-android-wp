@@ -3,7 +3,11 @@
   <modelElements xsi:type="mddandroid:CycleClass" name="sfsdfs">
     <attributes name="asdfasdf" type="asdf"/>
   </modelElements>
-  <modelElements xsi:type="mddandroid:PersistentClass" name="pc2">
+  <modelElements xsi:type="mddandroid:PersistentClass" name="pc2" associationAsTarget="//@modelElements.3">
     <attributes name="attr1" type="String"/>
   </modelElements>
+  <modelElements xsi:type="mddandroid:PersistentClass" name="pc34" associationAsSource="//@modelElements.3">
+    <attributes name="attr2" type="Integer"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:Agregation" name="hola" source="//@modelElements.2" target="//@modelElements.1"/>
 </mddandroid:Diagram>
