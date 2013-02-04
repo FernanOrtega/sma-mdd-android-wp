@@ -23,6 +23,9 @@
     <columns
         name="c3"
         type="double"/>
+    <columns
+        name="c4"
+        type="char"/>
   </tables>
   <relations
       source="//@tables.0"

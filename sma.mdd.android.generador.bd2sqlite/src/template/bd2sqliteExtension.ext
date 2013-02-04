@@ -14,7 +14,9 @@ String typeColumn(Column col):
 		case 'Boolean': 'INTEGER'
 		case 'boolean': 'INTEGER'
 		case 'Date': 'TEXT'
-		case 'Calendar': 'TEXT'		
+		case 'Calendar': 'TEXT'
+		case 'char' : 'INTEGER'
+		case 'Character' : 'INTEGER'		
 		default: 'TEXT'
 	}
 ;
