@@ -50,6 +50,42 @@
     <element xmi:type="mddandroid:PersistentClass" href="default.dcmddandroid#//@modelElements.1"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gbrwBW7uEeKpBLVutw6noA" x="504" y="168"/>
   </children>
+  <children xmi:type="notation:Node" xmi:id="_1OkwIG7uEeKpBLVutw6noA" type="2009">
+    <children xmi:type="notation:DecorationNode" xmi:id="_1OkwJm7uEeKpBLVutw6noA" type="5018"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_1OkwJ27uEeKpBLVutw6noA" type="7024">
+      <children xmi:type="notation:Node" xmi:id="_2Bfa0G7uEeKpBLVutw6noA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_2Bfa1W7uEeKpBLVutw6noA" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_2Bfa0W7uEeKpBLVutw6noA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_2Bfa0m7uEeKpBLVutw6noA" fontName="Segoe UI"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_2Bfa027uEeKpBLVutw6noA"/>
+        <element xmi:type="mddandroid:Attribute" href="default.dcmddandroid#//@modelElements.2/@attributes.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2Bfa1G7uEeKpBLVutw6noA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_1OkwKG7uEeKpBLVutw6noA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_1OkwKW7uEeKpBLVutw6noA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_1OkwKm7uEeKpBLVutw6noA" type="7025">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_1OkwK27uEeKpBLVutw6noA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_1OkwLG7uEeKpBLVutw6noA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_1OkwIW7uEeKpBLVutw6noA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_1OkwIm7uEeKpBLVutw6noA" fontName="Segoe UI"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_1OkwI27uEeKpBLVutw6noA"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_1OkwJG7uEeKpBLVutw6noA"/>
+    <element xmi:type="mddandroid:PersistentClass" href="default.dcmddandroid#//@modelElements.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1OkwJW7uEeKpBLVutw6noA" x="360" y="255"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_Z3uTwW7uEeKpBLVutw6noA"/>
   <element xmi:type="mddandroid:Diagram" href="default.dcmddandroid#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_3PUf4G7uEeKpBLVutw6noA" type="4001" source="_1OkwIG7uEeKpBLVutw6noA" target="_gbrwAG7uEeKpBLVutw6noA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_3PVG8G7uEeKpBLVutw6noA" type="6005">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_3PVG8W7uEeKpBLVutw6noA" x="-2" y="-10"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_3PUf4W7uEeKpBLVutw6noA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_3PUf4m7uEeKpBLVutw6noA" fontName="Segoe UI"/>
+    <element xmi:type="mddandroid:Agregation" href="default.dcmddandroid#//@modelElements.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3PUf427uEeKpBLVutw6noA" points="[19, -14, -90, 63]$[88, -98, -21, -21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3PWVEG7uEeKpBLVutw6noA" id="(0.6153846153846154,0.15555555555555556)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3PWVEW7uEeKpBLVutw6noA" id="(0.24705882352941178,0.26666666666666666)"/>
+  </edges>
 </notation:Diagram>
