@@ -1,0 +1,24 @@
+import dcmddandroid;
+
+String tipoElemento (ModelElement de):
+	switch (de.metaType){
+ 		case dcmddandroid::Class: 'class'
+ 		case dcmddandroid::CycleClass: 'class'
+ 		case dcmddandroid::PersistentClass:'class'
+ 		case dcmddandroid::Interface:'interface'
+ 		case dcmddandroid::Enum:'enum'
+ 		case dcmddandroid::Implements:'implements'
+		default: 'FAIL'
+	}
+;
+
+String clearName (String dirty):dirty.split('::').last();
+
+String visibilidad (ModelElement de): ((dcmddandroid::Class) de).visibility.toString();
+String EsAbstracta (ModelElement de): ((dcmddandroid::Class) de).isAbstract?'abstract':'';
+
+String Esfinal (Attribute att): att.final?'final':'';
+String EsStatic (Attribute att): att.static?'static':'';
+String implementaA (ModelElement de): ((dcmddandroid::Class) de).implements.implemented.name.toString();
+
+ 

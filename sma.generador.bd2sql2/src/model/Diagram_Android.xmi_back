@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mddandroid:Diagram
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mddandroid="http://sma/mdd/android/1.0"
+    xsi:schemaLocation="http://sma/mdd/android/1.0 ../metamodel/dcmddandroid.ecore">
+
+    <modelElements
+        xsi:type="mddandroid:Class"
+        name="clasePrueba"
+        isAbstract="true"
+        implements="//@diagramElements.0/@modelElements.6">
+      <attributes
+          name="atributo1"
+          type="Jawier"/>
+      <attributes
+          name="nombreDelAtributo2"
+          static="true"
+          type="String2.0"
+          secured="true"/>
+      <methods
+          name="metodoPrueba"
+          static="true"
+          isAbstract="true"
+          returns="JuanMa">
+        <parameters
+            name="p1"
+            type="int"/>
+        <parameters
+            name="p2"
+            type="String"/>
+      </methods>
+      <methods
+          name="Metodo2"/>
+    </modelElements>
+    <modelElements
+        xsi:type="mddandroid:Enum"
+        name="enumASE">
+      <values
+          name="KOla"/>
+      <values
+          name="loryMoney"/>
+    </modelElements>
+    <modelElements
+        xsi:type="mddandroid:Interface"
+        name="interFaceJw"/>
+    <modelElements
+        xsi:type="mddandroid:Class"
+        name="Fer">
+      <methods
+          name="Metodo1"/>
+      <methods
+          name="Metodo2"/>
+    </modelElements>
+    <modelElements
+        xsi:type="mddandroid:PersistentClass"
+        name="Persistencia"/>
+    <modelElements
+        xsi:type="mddandroid:CycleClass"
+        name="Jesus">
+      <attributes
+          name="variableDeCyClass"
+          visibility="private"
+          type="int"/>
+      <methods
+          name="metodoDeCyClass"
+          returns="int"/>
+    </modelElements>
+    <modelElements
+        xsi:type="mddandroid:Implements"
+        name="novisible_toni_TQ"
+        implemented="//@diagramElements.0/@modelElements.2"
+        implements="//@diagramElements.0/@modelElements.0"/>
+
+</mddandroid:Diagram>

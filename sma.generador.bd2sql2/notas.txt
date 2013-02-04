@@ -1,0 +1,3 @@
+Para olvidar:
+valor por defecto en los atributos no se tienen en cuenta.
+return por defecto

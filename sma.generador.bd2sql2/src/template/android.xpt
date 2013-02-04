@@ -1,0 +1,56 @@
+«IMPORT dcmddandroid»
+«EXTENSION template::android»
+
+«DEFINE main FOR Diagram»
+«EXPAND modelElement FOREACH modelElements-»
+«ENDDEFINE»
+
+«DEFINE modelElement FOR ModelElement»
+
+«IF AbstractClass.isInstance(this)-»
+	«FILE this.name + '.java'-»
+	//TODO «clearName(this.metaType.toString())» «this.name»
+	«IF clearName(this.metaType.toString()) == 'PersistentClass'-»
+	//Note: Persistent class
+	«ENDIF-»
+	«this.visibilidad()-» «this.EsAbstracta()» «this.name-»
+«IF Class.isInstance(this)-»
+«IF((Class) this).implements.size > 0-»
+ implements «FOREACH ((Class) this).implements AS implementaciones SEPARATOR ','-»
+«implementaciones.implemented.name-» 
+«ENDFOREACH-»
+«ENDIF-»
+«ENDIF-»
+	{
+	«FOREACH this.eContents.typeSelect(Attribute) AS soloAtributos-»
+		«IF soloAtributos.secured.toString() == 'true'-»
+		@EsSeguro
+		«ENDIF-»
+		«soloAtributos.visibility» «EsStatic(soloAtributos)» «Esfinal(soloAtributos)» «soloAtributos.type» «soloAtributos.name»;
+	«ENDFOREACH»
+	«FOREACH this.eContents.typeSelect(Method) AS soloMetodos»
+	«soloMetodos.visibility» «soloMetodos.returns» «soloMetodos.name»(«FOREACH soloMetodos.parameters.typeSelect(Parameter) AS parametros SEPARATOR  ','» «parametros.type» «parametros.name»«ENDFOREACH») {
+			//TODO «clearName(soloMetodos.metaType.toString())» «soloMetodos.name»
+			}
+	«ENDFOREACH»
+	}
+	«ENDFILE»
+«ENDIF»
+«IF Enum.isInstance(this)»
+	«FILE this.name + '.java'-»
+enum «this.name»{
+	«FOREACH this.eContents.typeSelect(EnumValue) AS soloEnumValue SEPARATOR ','-»
+«soloEnumValue.name-»
+	«ENDFOREACH-»}
+	«ENDFILE»
+«ENDIF»
+«IF Interface.isInstance(this)»
+	«FILE this.name + '.java'-»
+interface «this.name»{
+	«FOREACH this.eContents.typeSelect(Method) AS soloMetodos»
+	«soloMetodos.visibility» «soloMetodos.returns» «soloMetodos.name»(«FOREACH soloMetodos.parameters.typeSelect(Parameter) AS parametros SEPARATOR  ','» «parametros.type» «parametros.name»«ENDFOREACH»);
+	«ENDFOREACH»
+	}«ENDFILE»
+«ENDIF»
+	
+«ENDDEFINE»
