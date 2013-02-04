@@ -4,6 +4,15 @@
 module dc2db;
 create DBOUT : DBMM from DCIN : DCMM;
 
+rule Diagram2Scheme{
+	from
+	DCIN:DCMM!Diagram
+	to
+	outER:DBMM!DBScheme(
+		name <- DCIN.name
+	)
+}
+
 rule Association2Relation{
 	from
 	assDC : DCMM!Association
@@ -37,14 +46,5 @@ rule PersistentClass2Table{
 		columns <- classDC.attributes,
 		inRelation <- classDC.associationAsTarget,
 		outRelation <- classDC.associationAsSource
-	)
-}
-
-rule Diagram2Scheme{
-	from
-	DCIN:DCMM!Diagram
-	to
-	outER:DBMM!DBScheme(
-		name <- DCIN.name
 	)
 }

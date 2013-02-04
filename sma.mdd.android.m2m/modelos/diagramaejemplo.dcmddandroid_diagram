@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mddandroid="http://sma/mdd/android/1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_xIcvoG7rEeKpBLVutw6noA" type="Dcmddandroid" name="diagramaejemplo.dcmddandroid_diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_xIcvoW7rEeKpBLVutw6noA"/>
-  <element xmi:type="mddandroid:Diagram" href="default.dcmddandroid#/"/>
-</notation:Diagram>
