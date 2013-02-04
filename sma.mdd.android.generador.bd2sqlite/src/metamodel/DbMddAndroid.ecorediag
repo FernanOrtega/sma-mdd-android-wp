@@ -102,7 +102,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_JefFYW73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
     <element xmi:type="ecore:EClass" href="DbMddAndroid.ecore#//Relation"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JefFYm73EeKBBrVxAq9L2g" x="202" y="111"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JefFYm73EeKBBrVxAq9L2g" x="295" y="50"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_JdY5MW73EeKBBrVxAq9L2g"/>
   <element xmi:type="ecore:EPackage" href="DbMddAndroid.ecore#/"/>
