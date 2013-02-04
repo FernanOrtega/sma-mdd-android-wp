@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mddandroid:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mddandroid="http://sma/mdd/android/1.0">
+  <modelElements xsi:type="mddandroid:CycleClass" name="sfsdfs">
+    <attributes name="asdfasdf" type="asdf"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:PersistentClass" name="pc2">
+    <attributes name="attr1" type="String"/>
+  </modelElements>
+</mddandroid:Diagram>

@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mddandroid:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mddandroid="http://sma/mdd/android/1.0">
-  <diagramElements xsi:type="mddandroid:PersistentClass" name="pc1" associationAsSource="//@diagramElements.3">
-    <attributes name="att1" type="Long"/>
-    <attributes name="att2" type="Double"/>
-  </diagramElements>
-  <diagramElements xsi:type="mddandroid:PersistentClass" name="pc2" associationAsTarget="//@diagramElements.3">
-    <attributes name="attr3" type="String"/>
-    <attributes name="att4" type="Boolean"/>
-  </diagramElements>
-  <diagramElements xsi:type="mddandroid:PersistentClass" name="pc3">
-    <attributes name="attr5" type="Melapela"/>
-  </diagramElements>
-  <diagramElements xsi:type="mddandroid:Agregation" name="asdfsdf" rolTarget="pc2Rol" maxMultiplicityTarget="1" source="//@diagramElements.0" target="//@diagramElements.1"/>
-  <diagramElements xsi:type="mddandroid:CycleClass" name="cc1"/>
+  <modelElements xsi:type="mddandroid:Class" name="class1" associationAsTarget="//@modelElements.2">
+    <attributes name="attr1" type="String"/>
+    <attributes name="attr2" type="String"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:Class" name="class2" associationAsSource="//@modelElements.2">
+    <attributes name="attr3" type="Integer"/>
+    <attributes name="attr4" type="Long"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:Agregation" name="tiene" rolSource="rolSource" rolTarget="" maxMultiplicityTarget="1" source="//@modelElements.1" target="//@modelElements.0"/>
 </mddandroid:Diagram>

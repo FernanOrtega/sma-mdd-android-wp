@@ -10,8 +10,6 @@ abstract class NamedElement {
 
 abstract class AbstractClass extends ModelElement, EVisibility {
 	attr boolean isAbstract;
-	ref InnerClass[*]#innerClass innerClassAsInner;
-	ref InnerClass[?]#container innerClassAsContainer;	
 	ref Implements[*]#implements implements;
 	@gmf.compartment(layout="list", collapsible="false")
 	val Attribute[*] attributes;
@@ -104,28 +102,10 @@ class Attribute extends ClassElement {
 
 @gmf.diagram(foo="bar")
 class Diagram extends NamedElement{
-	val DiagramElement[*] diagramElements;
+	val ModelElement[*] modelElements;
 }
 
-@gmf.node (
-	label="name",
-	label.icon="false",
-	color = "255,255,255",
-	tool.name="Package",
-	tool.description="Package",
-	figure = "rectangle"
-)
-class Package extends DiagramElement {
-   val Package[*]#subPackage subPackages;
-   @gmf.compartment(foo="bar")
-   val ModelElement[*] modelElements;
-   op String getFullName();
-}
-
-abstract class DiagramElement extends NamedElement{
-}
-
-abstract class ModelElement extends DiagramElement {
+abstract class ModelElement extends NamedElement {
    
 }
 
@@ -207,17 +187,4 @@ class Implements extends ModelElement {
 
 class EVisibility {
 	attr Visibility visibility;
-}
-
-@gmf.link(
-	label="name",
-	source="innerClass",
-	target="container",
-	target.decoration="arrow",
-	color="0,0,0",
-	tool.description="InnerClass"
-)
-class InnerClass extends ModelElement {
-   ref AbstractClass[1]#innerClassAsInner innerClass;
-   ref AbstractClass[1]#innerClassAsContainer container;
 }
