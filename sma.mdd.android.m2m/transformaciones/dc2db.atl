@@ -9,7 +9,9 @@ rule Diagram2Scheme{
 	DCIN:DCMM!Diagram
 	to
 	outER:DBMM!DBScheme(
-		name <- DCIN.name
+		name <- DCIN.name,
+		tables <- DCIN.modelElements,
+		relations <- DCIN.modelElements
 	)
 }
 
@@ -27,16 +29,6 @@ rule Association2Relation{
 	)
 }
 
-rule Attribute2column{
-	from
-	attrDC : DCMM!Attribute
-	to
-	outER:DBMM!Column(
-		name <- attrDC.name,
-		type <- attrDC.type
-		)
-}
-
 rule PersistentClass2Table{
 	from
 	classDC:DCMM!PersistentClass
@@ -47,4 +39,14 @@ rule PersistentClass2Table{
 		inRelation <- classDC.associationAsTarget,
 		outRelation <- classDC.associationAsSource
 	)
+}
+
+rule Attribute2column{
+	from
+	attrDC : DCMM!Attribute
+	to
+	outER:DBMM!Column(
+		name <- attrDC.name,
+		type <- attrDC.type
+		)
 }
