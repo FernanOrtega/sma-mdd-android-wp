@@ -3,11 +3,8 @@
 	
 
 
-	
-		
-			[otraClase] -rolSource
-		
-	
+			List <nuevaEra> maria;
+			nuevaEra Money;
 
 
 	

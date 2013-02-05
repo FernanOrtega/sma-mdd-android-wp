@@ -6,11 +6,8 @@
 	
 
 
-	
-		
-			[otraClase] -rolTarget
-		
-	
+			otraClase fer;
+			List <otraClase> Lori;
 
 
 	

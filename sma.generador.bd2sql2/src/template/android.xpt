@@ -33,15 +33,28 @@
 	«ENDFOREACH»
 
 «LET ((Class)this) AS e»
-	«IF e.associationAsSource.size >0»
-		«IF e.associationAsSource.rolTarget.isEmpty.toString() == "false"»
-			«e.associationAsSource.target.name» -rolTarget
-		«ENDIF»
-	«ELSEIF e.associationAsTarget.size >0»
-		«IF e.associationAsTarget.rolSource.isEmpty.toString() != "true"»
-			«e.associationAsTarget.target.name» -rolSource
-		«ENDIF»
-	«ENDIF»
+	«IF e.associationAsSource.size >0-»
+		«FOREACH e.associationAsSource AS asociacion-»
+		«IF asociacion.rolTarget.length > 0-»
+			«IF asociacion.maxMultiplicityTarget > 1 || asociacion.maxMultiplicityTarget  == -1-»
+			List <«asociacion.target.name»> «asociacion.rolTarget-»;
+			«ELSEIF asociacion.maxMultiplicityTarget == 1-»
+			«asociacion.target.name» «asociacion.rolTarget-»;
+			«ENDIF-»
+		«ENDIF-»
+		«ENDFOREACH-»
+	«ENDIF-»
+	«IF e.associationAsTarget.size >0-»
+		«FOREACH e.associationAsTarget AS asociacion-»
+		«IF asociacion.rolSource.length > 0-»
+			«IF asociacion.maxMultiplicitySource > 1 || asociacion.maxMultiplicitySource  == -1-»
+			List <«asociacion.source.name»> «asociacion.rolSource-»;
+			«ELSEIF asociacion.maxMultiplicitySource == 1-»
+			«asociacion.source.name» «asociacion.rolSource-»;
+			«ENDIF-»
+		«ENDIF-»
+		«ENDFOREACH-»
+	«ENDIF-»
 «ENDLET»
 
 «IF clearName(this.metaType.toString()) == 'CycleClass'-»
