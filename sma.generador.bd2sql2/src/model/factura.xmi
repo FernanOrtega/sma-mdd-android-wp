@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<BD:EsquemaBD
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:BD="BD"
+    xsi:schemaLocation="BD ../metamodel/BD.ecore">
+  <tablas nombre="Facturas">
+    <columnas
+        nombre="id"
+        tipo="Integer"/>
+    <columnas
+        nombre="descripcion"/>
+    <columnas
+        nombre="fecha"
+        tipo="Date"/>
+    <columnas
+        nombre="Total"
+        tipo="Double"/>
+  </tablas>
+  <tablas nombre="Cliente">
+    <columnas
+        nombre="dni"/>
+    <columnas
+        nombre="nombre"/>
+    <columnas
+        nombre="direccion"/>
+  </tablas>
+</BD:EsquemaBD>
