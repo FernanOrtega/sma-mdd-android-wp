@@ -1,6 +1,6 @@
 @namespace(
-	uri="http://sma/mdd/android/1.0",
-	prefix="mddandroid")
+	uri="http://sma/mdd/android/1.0/dc",
+	prefix="dc")
 @gmf(foo="bar")
 package dcmddandroid;
 
