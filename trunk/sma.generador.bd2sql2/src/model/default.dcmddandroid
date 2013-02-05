@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mddandroid:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mddandroid="http://sma/mdd/android/1.0/dc">
+  <modelElements xsi:type="mddandroid:Enum" name="TipoTelefono">
+    <values name="Personal"/>
+    <values name="Movil"/>
+    <values name="Trabajo"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:PersistentClass" name="Persona" associationAsSource="//@modelElements.2" associationAsTarget="//@modelElements.2">
+    <attributes name="nombre" visibility="private" type="String"/>
+    <attributes name="apellido1" visibility="private" type="String"/>
+    <attributes name="apellido2" visibility="private" type="String"/>
+    <attributes name="telefono" visibility="private" type="TipoTelefono"/>
+    <methods name="addPersona" returns="boolean"/>
+    <methods name="deletePersona" returns="boolean"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:Composition" name="tiene" source="//@modelElements.1" target="//@modelElements.1"/>
+  <modelElements xsi:type="mddandroid:CycleClass" name="Login" associationAsSource="//@modelElements.7">
+    <attributes name="usuario" visibility="private" type="String"/>
+    <attributes name="password" visibility="private" type="String"/>
+    <methods name="login" returns="boolean"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:CycleClass" name="Agenda" associationAsTarget="//@modelElements.7"/>
+  <modelElements xsi:type="mddandroid:Class" name="Checker">
+    <methods name="checkAccess" returns="boolean"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:Class" name="CheckerCallBack">
+    <methods name="allow" returns="boolean"/>
+    <methods name="dontAllow" returns="boolean"/>
+  </modelElements>
+  <modelElements xsi:type="mddandroid:Agregation" source="//@modelElements.3" target="//@modelElements.4"/>
+</mddandroid:Diagram>
