@@ -1,0 +1,22 @@
+import DbMddAndroid;
+
+String typeColumn(Column col):
+	switch(col.type){
+		case 'Integer':'INTEGER'
+		case 'int': 'INTEGER'
+		case 'Long': 'INTEGER'
+		case 'long': 'INTEGER'
+		case 'String': 'TEXT'
+		case 'Double': 'REAL'
+		case 'double': 'REAL'
+		case 'Float': 'REAL'
+		case 'float': 'REAL'
+		case 'Boolean': 'INTEGER'
+		case 'boolean': 'INTEGER'
+		case 'Date': 'TEXT'
+		case 'Calendar': 'TEXT'
+		case 'char' : 'INTEGER'
+		case 'Character' : 'INTEGER'		
+		default: 'TEXT'
+	}
+;

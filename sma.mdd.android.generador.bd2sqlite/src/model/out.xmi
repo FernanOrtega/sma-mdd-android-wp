@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI 
+	xmi:version="2.0" 
+	xmlns:xmi="http://www.omg.org/XMI" 
+	xmlns:DbMddAndroid="DbMddAndroid"
+	xsi:schemaLocation="DbMddAndroid ../metamodel/DbMddAndroid.ecore">
+  <DbMddAndroid:Column name="attr1" type="String "/>
+  <DbMddAndroid:Column name="attr2" type="Integer"/>
+  <DbMddAndroid:Column name="attr3" type="Long"/>
+  <DbMddAndroid:Column name="attr4" type="Double"/>
+  <DbMddAndroid:Table name="pc1">
+    <columns name="attr1" type="char"/>
+    <columns name="attr2" type="String"/>
+    <columns name="attr3" type="Integer"/>
+  </DbMddAndroid:Table>
+  <DbMddAndroid:Table name="pc2">
+    <columns name="attr1" type="Long"/>
+    <columns name="attr2" type="int"/>
+    <outRelation maxTargetMultiplicity="-1"/>
+  </DbMddAndroid:Table>
+  <DbMddAndroid:DBScheme/>
+</xmi:XMI>

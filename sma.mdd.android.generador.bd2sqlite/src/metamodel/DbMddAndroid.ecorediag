@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_JdY5MG73EeKBBrVxAq9L2g" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_Jd8S0G73EeKBBrVxAq9L2g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_JeK8UG73EeKBBrVxAq9L2g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_JeMKcG73EeKBBrVxAq9L2g" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JeMKcW73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JeMKcm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JeMKc273EeKBBrVxAq9L2g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JeMxgG73EeKBBrVxAq9L2g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JeMxgW73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JeMxgm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JeMxg273EeKBBrVxAq9L2g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Jd8S0W73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="DbMddAndroid.ecore#//DBScheme"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jd8S0m73EeKBBrVxAq9L2g" x="105" y="376"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_JecCEG73EeKBBrVxAq9L2g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_JecpIG73EeKBBrVxAq9L2g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_JecpIW73EeKBBrVxAq9L2g" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JecpIm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JecpI273EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JecpJG73EeKBBrVxAq9L2g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JecpJW73EeKBBrVxAq9L2g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JecpJm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JecpJ273EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JecpKG73EeKBBrVxAq9L2g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_JecCEW73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="DbMddAndroid.ecore#//Table"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JecCEm73EeKBBrVxAq9L2g" x="105" y="273"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_JecpKW73EeKBBrVxAq9L2g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_JecpLG73EeKBBrVxAq9L2g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_JedQMG73EeKBBrVxAq9L2g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_JedQOG73EeKBBrVxAq9L2g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="DbMddAndroid.ecore#//Column/type"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JedQOW73EeKBBrVxAq9L2g"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JedQMW73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JedQMm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JedQM273EeKBBrVxAq9L2g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JedQNG73EeKBBrVxAq9L2g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JedQNW73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JedQNm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JedQN273EeKBBrVxAq9L2g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_JecpKm73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="DbMddAndroid.ecore#//Column"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JecpK273EeKBBrVxAq9L2g" x="3" y="111"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Jed3QG73EeKBBrVxAq9L2g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_Jed3Q273EeKBBrVxAq9L2g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_JeeeUG73EeKBBrVxAq9L2g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_JeeeWG73EeKBBrVxAq9L2g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="DbMddAndroid.ecore#//NamedElement/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JeeeWW73EeKBBrVxAq9L2g"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JeeeUW73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JeeeUm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JeeeU273EeKBBrVxAq9L2g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JeeeVG73EeKBBrVxAq9L2g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JeeeVW73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JeeeVm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JeeeV273EeKBBrVxAq9L2g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Jed3QW73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="DbMddAndroid.ecore#//NamedElement"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jed3Qm73EeKBBrVxAq9L2g"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_JefFYG73EeKBBrVxAq9L2g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_JefFY273EeKBBrVxAq9L2g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_JefFZG73EeKBBrVxAq9L2g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_JefsdG73EeKBBrVxAq9L2g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="DbMddAndroid.ecore#//Relation/minSourceMultiplicity"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JefsdW73EeKBBrVxAq9L2g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Jefsdm73EeKBBrVxAq9L2g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="DbMddAndroid.ecore#//Relation/maxSourceMultiplicity"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Jefsd273EeKBBrVxAq9L2g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_JefseG73EeKBBrVxAq9L2g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="DbMddAndroid.ecore#//Relation/minTargetMultiplicity"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JefseW73EeKBBrVxAq9L2g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_JegTgG73EeKBBrVxAq9L2g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="DbMddAndroid.ecore#//Relation/maxTargetMultiplicity"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_JegTgW73EeKBBrVxAq9L2g"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JefFZW73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JefFZm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JefFZ273EeKBBrVxAq9L2g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JefscG73EeKBBrVxAq9L2g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JefscW73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jefscm73EeKBBrVxAq9L2g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jefsc273EeKBBrVxAq9L2g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_JefFYW73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="DbMddAndroid.ecore#//Relation"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JefFYm73EeKBBrVxAq9L2g" x="295" y="50"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_JdY5MW73EeKBBrVxAq9L2g"/>
+  <element xmi:type="ecore:EPackage" href="DbMddAndroid.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_Jej94G73EeKBBrVxAq9L2g" type="3002" source="_Jd8S0G73EeKBBrVxAq9L2g" target="_JecCEG73EeKBBrVxAq9L2g">
+    <children xmi:type="notation:Node" xmi:id="_JelMAG73EeKBBrVxAq9L2g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JelMAW73EeKBBrVxAq9L2g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JemaIG73EeKBBrVxAq9L2g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JemaIW73EeKBBrVxAq9L2g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Jej94W73EeKBBrVxAq9L2g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Jej94m73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="DbMddAndroid.ecore#//DBScheme/tables"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Jej94273EeKBBrVxAq9L2g" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jmi1MG73EeKBBrVxAq9L2g" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jmi1MW73EeKBBrVxAq9L2g" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_JemaIm73EeKBBrVxAq9L2g" type="3002" source="_Jd8S0G73EeKBBrVxAq9L2g" target="_JefFYG73EeKBBrVxAq9L2g">
+    <children xmi:type="notation:Node" xmi:id="_JenBMG73EeKBBrVxAq9L2g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JenBMW73EeKBBrVxAq9L2g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JenBMm73EeKBBrVxAq9L2g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JenBM273EeKBBrVxAq9L2g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_JemaI273EeKBBrVxAq9L2g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_JemaJG73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="DbMddAndroid.ecore#//DBScheme/relations"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JemaJW73EeKBBrVxAq9L2g" points="[0, 0, -130, 163]$[130, -61, 0, 102]$[130, -163, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jml4gG73EeKBBrVxAq9L2g" id="(0.7450980392156863,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jml4gW73EeKBBrVxAq9L2g" id="(0.5736842105263158,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_JenBNG73EeKBBrVxAq9L2g" type="3003" source="_Jd8S0G73EeKBBrVxAq9L2g" target="_Jed3QG73EeKBBrVxAq9L2g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_JenBNW73EeKBBrVxAq9L2g" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_JenBNm73EeKBBrVxAq9L2g" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JenBN273EeKBBrVxAq9L2g" points="[0, 0, 102, 325]$[0, -30, 102, 295]$[-173, -30, -71, 295]$[-173, -295, -71, 30]$[-102, -295, 0, 30]$[-102, -325, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmlRcG73EeKBBrVxAq9L2g" id="(0.24509803921568626,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmlRcW73EeKBBrVxAq9L2g" id="(0.24347826086956523,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_JenoQG73EeKBBrVxAq9L2g" type="3002" source="_JecCEG73EeKBBrVxAq9L2g" target="_JecpKW73EeKBBrVxAq9L2g">
+    <children xmi:type="notation:Node" xmi:id="_JenoRG73EeKBBrVxAq9L2g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JenoRW73EeKBBrVxAq9L2g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JenoRm73EeKBBrVxAq9L2g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JenoR273EeKBBrVxAq9L2g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_JenoQW73EeKBBrVxAq9L2g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_JenoQm73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="DbMddAndroid.ecore#//Table/columns"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JenoQ273EeKBBrVxAq9L2g" points="[0, 0, 73, 111]$[-73, -111, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jmi1Mm73EeKBBrVxAq9L2g" id="(0.24509803921568626,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmjcQG73EeKBBrVxAq9L2g" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_JenoSG73EeKBBrVxAq9L2g" type="3002" source="_JecCEG73EeKBBrVxAq9L2g" target="_JefFYG73EeKBBrVxAq9L2g">
+    <children xmi:type="notation:Node" xmi:id="_JeoPUG73EeKBBrVxAq9L2g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JeoPUW73EeKBBrVxAq9L2g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JeoPUm73EeKBBrVxAq9L2g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JeoPU273EeKBBrVxAq9L2g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_JenoSW73EeKBBrVxAq9L2g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_JenoSm73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="DbMddAndroid.ecore#//Table/outRelation"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JenoS273EeKBBrVxAq9L2g" points="[0, 0, -69, 60]$[69, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmkDUG73EeKBBrVxAq9L2g" id="(0.696078431372549,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmkqYG73EeKBBrVxAq9L2g" id="(0.22631578947368422,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_JeoPVG73EeKBBrVxAq9L2g" type="3002" source="_JecCEG73EeKBBrVxAq9L2g" target="_JefFYG73EeKBBrVxAq9L2g">
+    <children xmi:type="notation:Node" xmi:id="_JeoPWG73EeKBBrVxAq9L2g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JeoPWW73EeKBBrVxAq9L2g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JeoPWm73EeKBBrVxAq9L2g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JeoPW273EeKBBrVxAq9L2g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_JeoPVW73EeKBBrVxAq9L2g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_JeoPVm73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="DbMddAndroid.ecore#//Table/inRelation"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JeoPV273EeKBBrVxAq9L2g" points="[0, 0, -57, 60]$[57, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmjcQW73EeKBBrVxAq9L2g" id="(0.5980392156862745,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmjcQm73EeKBBrVxAq9L2g" id="(0.11052631578947368,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_JeoPXG73EeKBBrVxAq9L2g" type="3003" source="_JecCEG73EeKBBrVxAq9L2g" target="_Jed3QG73EeKBBrVxAq9L2g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_JeoPXW73EeKBBrVxAq9L2g" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_JeoPXm73EeKBBrVxAq9L2g" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JeoPX273EeKBBrVxAq9L2g" points="[0, 0, 70, 222]$[0, -192, 70, 30]$[-70, -192, 0, 30]$[-70, -222, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmlRcm73EeKBBrVxAq9L2g" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmlRc273EeKBBrVxAq9L2g" id="(0.7478260869565218,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Jeo2YG73EeKBBrVxAq9L2g" type="3003" source="_JecpKW73EeKBBrVxAq9L2g" target="_Jed3QG73EeKBBrVxAq9L2g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Jeo2YW73EeKBBrVxAq9L2g" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Jeo2Ym73EeKBBrVxAq9L2g" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Jeo2Y273EeKBBrVxAq9L2g" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmkqYW73EeKBBrVxAq9L2g" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmkqYm73EeKBBrVxAq9L2g" id="(0.4956521739130435,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Jeo2ZG73EeKBBrVxAq9L2g" type="3002" source="_JefFYG73EeKBBrVxAq9L2g" target="_JecCEG73EeKBBrVxAq9L2g">
+    <children xmi:type="notation:Node" xmi:id="_Jeo2aG73EeKBBrVxAq9L2g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Jeo2aW73EeKBBrVxAq9L2g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Jeo2am73EeKBBrVxAq9L2g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Jeo2a273EeKBBrVxAq9L2g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Jeo2ZW73EeKBBrVxAq9L2g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Jeo2Zm73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="DbMddAndroid.ecore#//Relation/source"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Jeo2Z273EeKBBrVxAq9L2g" points="[0, 0, 81, -60]$[-81, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmhAAG73EeKBBrVxAq9L2g" id="(0.34210526315789475,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmhnEG73EeKBBrVxAq9L2g" id="(0.7941176470588235,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_JepdcG73EeKBBrVxAq9L2g" type="3002" source="_JefFYG73EeKBBrVxAq9L2g" target="_JecCEG73EeKBBrVxAq9L2g">
+    <children xmi:type="notation:Node" xmi:id="_JepddG73EeKBBrVxAq9L2g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_JepddW73EeKBBrVxAq9L2g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Jepddm73EeKBBrVxAq9L2g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Jepdd273EeKBBrVxAq9L2g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_JepdcW73EeKBBrVxAq9L2g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Jepdcm73EeKBBrVxAq9L2g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="DbMddAndroid.ecore#//Relation/target"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Jepdc273EeKBBrVxAq9L2g" points="[0, 0, 93, -60]$[-93, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmiOIG73EeKBBrVxAq9L2g" id="(0.45789473684210524,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JmiOIW73EeKBBrVxAq9L2g" id="(0.8921568627450981,0.0)"/>
+  </edges>
+</notation:Diagram>
