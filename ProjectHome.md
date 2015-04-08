@@ -1,0 +1,1 @@
+Android and Windows Phone applications will be generated using MDD approach
